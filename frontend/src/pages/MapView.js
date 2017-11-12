@@ -30,8 +30,7 @@ const MapComponent = compose(
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCysVxJ3Ciav_vaMFbTFY0FEDvuUBN9wys&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `100vh` }} />,
-    mapElement: <div style={{ height: `100%` }} />,
-    markers: [buoy1, buoy2, ship, rig]
+    mapElement: <div style={{ height: `100%` }} />
   }),
   withScriptjs,
   withGoogleMap
@@ -58,7 +57,6 @@ const MapComponent = compose(
 class MapView extends React.PureComponent {
   state = {
     isMarkerShown: false,
-    // data: {},
   }
 
   sendMessage = message => {
@@ -91,6 +89,7 @@ class MapView extends React.PureComponent {
       <MapComponent
         isMarkerShown={this.state.isMarkerShown}
         onMarkerClick={() => this.props.onMarkerClick()}
+        markers={this.props.markers}
       />
     )
   }
