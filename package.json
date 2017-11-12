@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "nohup node app & cd frontend && npm run start"
   },
   "dependencies": {
     "express": "~4.15.5",
