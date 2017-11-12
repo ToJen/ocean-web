@@ -1,7 +1,8 @@
-const socketHandler = (client) => {
+const socketHandler = (client, io) => {
   client.on('location-changed', (data) => {
-    console.log('location changed!')
+    io.emit('location-changed', data)
+    console.log(data)
   })
 }
 
-module.exports = socketHandler;
+module.exports = socketHandler
