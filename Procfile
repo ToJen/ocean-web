@@ -1,1 +1,1 @@
-nohup node app & cd frontend && npm run start &
+web: nohup node app & cd frontend && npm run start &
