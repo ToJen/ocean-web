@@ -7,7 +7,7 @@
     "npm": "5.5.1"
   },
   "scripts": {
-    "start": "npm install && nohup node app & cd frontend && npm install && npm run start &"
+    "start": "node app & cd frontend && npm install && npm run start &"
   },
   "dependencies": {
     "express": "~4.15.5",
